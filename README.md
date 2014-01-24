@@ -1,4 +1,7 @@
-**Attach behavior in your model**
+**Put ValidationMessageBehavior.php inside app/Model/Behavior folder**
+
+
+**Attach behavior in your CakePHP Model**
 
 	public $actsAs = array('ValidationMessage');
 
@@ -15,3 +18,5 @@
 	);
 
 A validation message will automatically be attached to the rule, you don't have to explicitly specify the message;
+
+Supports CakePHP 2.xxx versions.
