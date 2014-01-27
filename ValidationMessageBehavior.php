@@ -103,6 +103,10 @@ class ValidationMessageBehavior extends ModelBehavior {
                                         $rule = is_string($rule['rule']) ? array($rule['rule']) : $rule['rule'];
                                     }
                                     if (is_string($rule[0]) && !empty($this->_messages[strtolower($rule[0])])) {
+                                    	if ($rule[0] == 'range') {
+                                            $rule[1] += 1;
+                                            $rule[2] -= 1;
+                                        }
                                         $ruleSet[$index]['message'] = $this->_autoMessage($rule);
                                     }
                                 }
